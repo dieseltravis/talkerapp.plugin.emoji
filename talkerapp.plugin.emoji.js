@@ -1,12 +1,8 @@
-﻿plugin.Emoji = function (matcher, path, meaning) {
+﻿plugin.Emoji = function (matcher, meaning) {
 	this.matcher = matcher;
-
-	this.replacementString = [
-		' <img src="', path, 
-		'" class="emoticons" height="16" width="16" style="position:relative; top:2px" alt="', meaning, 
-		'" title="', meaning, '" /> '
-	].join('');
-
+	this.replacementString = ' <img src=https://a248.e.akamai.net/assets.github.com/images/icons/emoji/"' + meaning +
+		'.png" class="emoticons" height="16" width="16" style="position:relative; top:2px" alt="' + meaning +
+		'" title="' + meaning + '" /> ';
 };
 
 plugin.emojis = (function () {
@@ -912,7 +908,6 @@ plugin.emojis = (function () {
 		_emojis.push(
 			new plugin.Emoji(
 				allEmoji[i][0], 
-				"TODO:",
 				allEmoji[i][1]
 			)
 		);
