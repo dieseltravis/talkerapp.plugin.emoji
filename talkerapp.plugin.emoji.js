@@ -27,6 +27,9 @@ plugin.emojis = (function () {
 			[/<3/g, 'heart'],
 			[/<\/3/g, 'broken_heart'],
 		//],
+		// the rest: 
+			[/:(\w+):/gi, "$1"]
+		/*
 		//people = [
 			[/:bowtie:/g, 'bowtie'],
 			[/:smile:/g, 'smile'],
@@ -901,6 +904,7 @@ plugin.emojis = (function () {
 			[/:small_red_triangle:/g, 'small_red_triangle'],
 			[/:small_red_triangle_down:/g, 'small_red_triangle_down'],
 			[/:shipit:/g, 'shipit']
+		*/
 		];
 
 	var _emojis = [];
