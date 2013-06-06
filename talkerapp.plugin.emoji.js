@@ -912,11 +912,12 @@ plugin.emojis = (function () {
 		_emojis.push(
 			new plugin.Emoji(
 				allEmoji[i][0], 
-				"/images/icons/smiley-evil.png",
+				"TODO:",
 				allEmoji[i][1]
 			)
 		);
 	}
+
 	return _emojis;
 }());
 
