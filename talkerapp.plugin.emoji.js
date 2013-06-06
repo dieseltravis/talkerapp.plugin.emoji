@@ -1,6 +1,6 @@
 ﻿plugin.Emoji = function (matcher, meaning) {
 	this.matcher = matcher;
-	this.replacementString = ' <img src=https://a248.e.akamai.net/assets.github.com/images/icons/emoji/"' + meaning +
+	this.replacementString = ' <img src="https://a248.e.akamai.net/assets.github.com/images/icons/emoji/' + meaning +
 		'.png" class="emoticons" height="16" width="16" style="position:relative; top:2px" alt="' + meaning +
 		'" title="' + meaning + '" /> ';
 };
