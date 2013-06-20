@@ -1,8 +1,9 @@
 ﻿plugin.Emoji = function (matcher, meaning) {
 	this.matcher = matcher;
 	this.replacementString = ' <img src="https://a248.e.akamai.net/assets.github.com/images/icons/emoji/' + meaning +
-		'.png" class="emoticons" height="16" width="16" style="position:relative; top:2px" alt="' + meaning +
+		'.png" class="emoticons" height="24" width="24" style="position:relative; top:2px; margin:-4px 0;" alt="' + meaning +
 		'" title="' + meaning + '" /> ';
+		//TODO: handle errors:  onerror="this.parentNode.insertBefore(document.createTextNode(\':' + meaning + ':\', this);this.removeNode(true);"
 };
 
 plugin.emojis = (function () {
@@ -28,7 +29,11 @@ plugin.emojis = (function () {
 			[/<\/3/g, 'broken_heart'],
 		//],
 		// the rest: 
-			[/:(\w+):/gi, "$1"]
+			[/:(\w+):/gi, "$1"],
+		// Ravicons:
+			[/:lol:/g, 'laughing'],
+			[/:laugh:/g, 'laughing'],
+			[/:ravi:/g, 'laughing']
 		/*
 		//people = [
 			[/:bowtie:/g, 'bowtie'],
